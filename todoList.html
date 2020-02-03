@@ -7,13 +7,30 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <h1>Todo List</h1>
-    <p id = "todoList">My todo list</p>
-    <button id="displayTodosButton">Display todos</button>
-    <button id = "toggleAll">Toggle All</button>
-    <p id = "demo"></p>
+    <div>
+        <button onclick = "handlers.displayTodos()">Display todos</button>
+        <button onclick = "handlers.toggleAll()">Toggle All</button>
+    </div>
+    <div>
+        <input id = "addTodoTextInput" type = 'text'/>
+        <button onclick = "handlers.addTodo()">Add</button>
+    </div>
+    <div>
+        <button onclick = "handlers.changeTodo()">Edit a Todo</button>
+        <input id = "changeTodoPositionInput" type = "number"/>
+        <input id = "changeTodoTextInput" type = "text"/>
+    </div>
+    <div>
+        <button onclick = "handlers.deleteTodo()">Delete</button>
+        <input id = "deleteTodoPositionInput" type = "number"/>
+    </div>
+    <div>
+        <button onclick = "handlers.toggleCompleted()">Complete a task</button>
+        <input id = "toggleCompletedPositionInput" type = "number"/>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
